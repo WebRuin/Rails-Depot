@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem "jquery-rails", "~> 3.0.4"
 
 # Use jquery-ui as the JavaScript library
 gem "jquery-ui-rails", "~> 4.0.5"
@@ -46,3 +46,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'will_paginate', '~> 3.0'
