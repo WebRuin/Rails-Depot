@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to users_url, notice: "User #{@user.name} was successfully created." }
+        format.html { redirect_to users_url, notice: "#{@user.name} was successfully created." }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
@@ -56,8 +56,8 @@ class UsersController < ApplicationController
   def destroy
     begin
         @user.destroy
-        flash[:notice] = "User #{@user.name} deleted"
-    rescue Exeption => e
+        flash[:notice] = "#{@user.name} was deleted"
+    rescue Exception => e
         flash[:notice] = e.message
     end
     respond_to do |format|
